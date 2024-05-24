@@ -27,8 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if ($statement->execute()) {
     header('Location: ./signin.php');
     exit();
-  } else {
-    echo 'ログインに失敗しました';
   }
 } 
 ?>

@@ -1,7 +1,7 @@
 <?php
   session_start();
   // エラーメッセージをセッション情報で受け取る
-  $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+  $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : '';
   unset($_SESSION['errors']);
 ?>
 

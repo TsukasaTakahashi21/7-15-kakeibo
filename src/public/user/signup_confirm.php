@@ -20,10 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (empty($email) || empty($password)) {
     $errors[] = 'EmailかPasswordの入力がありません';
   }
+
   // パスワードが一致しない場合
   if ($password !== $confirm_password) {
     $errors[] = 'パスワードが一致しません';
   }
+  
   // 同一のemailがすでに保存されている場合
   $sql = 'SELECT count(*) as count FROM users WHERE email = :email';
   $statement = $pdo->prepare($sql);
